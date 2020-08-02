@@ -25,7 +25,7 @@
       "id": 1,
       "locked": false,
       "name": "Dark cave",
-      "description": "This place very dark, however you can see something shiny. It looks like some kind of vial. On the other side of the cave you can see a person in a knight´s armor laying on the floor, facing the cold rugged wall.",
+      "description": "This place is very dark, however you can see something shiny. It looks like some kind of vial. On the other side of the cave you can see a person in a knight´s armor laying on the floor, facing the cold rugged wall.",
       "inventory" : [
         {
           "name": "Normal Key",
@@ -79,7 +79,7 @@
       "id": 2,
       "name": "Clearing",
       "locked": false,
-      "description": "You leave the dark cave and as soon as you get outside your eyes need to adjust to the sudden change of brightness...You are in a clearing. There are a lot of trees around you\r You hear a weird sound from behind you, right above the cave entrance. As if some little girl is giggling.",
+      "description": "You leave the dark cave and as soon as you get outside your eyes need to adjust to the sudden change of brightness...You are in a clearing. There are a lot of trees around you\r You hear a weird sound from behind you, right above the cave entrance. Almost as if some little girl is giggling.",
       "inventory" : [
       ],
       "characters" : [
