@@ -31,7 +31,7 @@
           "name": "Normal Key",
           "type": "key",
           "description": "A little rusty...",
-          "roomId": 2
+          "roomId": 6
         },
         {
           "name": "Shortsword",
@@ -226,7 +226,7 @@
     },
     {
       "id": 6,
-      "locked": false,
+      "locked": true,
       "name": "Cabin",
       "description": "A cozy place... However if only she knew",
       "inventory" : [
