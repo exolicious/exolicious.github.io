@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello wasm-pack!</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-shrink: 1;
+        flex-direction: column;
+        align-items: center;
+      }
+      #tabs {
+        display: flex;
+        flex-direction: row;
+        align-self: baseline;
+      }
+      .tab {
+        background-color: rgb(180, 223, 199);
+        border-radius: 3px;
+        padding: 2px;
+        margin-right: 50px;
+      }
+      .tab:hover {
+        cursor: pointer;
+        background-color: rgb(214, 241, 226);
+      }
+      #content {
+        width: 100%;
+      }
+      #trapezverfahren {
+        justify-content: space-around;
+        display:flex; 
+        align-items: center;
+        display: flex;
+        margin-left: 0px;
+      }
+      :not(.trapezverfahren) > #trapezverfahren {
+        display: none;
+      }
+      #fib {
+        justify-content: space-around;
+        display:flex; 
+        align-items: center;
+        display: flex;
+        margin-left: 0px;
+      }
+      :not(.fib) > #fib {
+        display: none;
+      }
+      .results {
+        width: 400px;
+        height: 100px;
+        resize: none;
+      }
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tabs">
+      <a id="tab-trapezverfahren" class="tab">Trapezverfahren</a>
+      <a id="tab-fib" class="tab">Fibonacci</a>
+    </div>
+    <div id="content" class="trapezverfahren">
+      <div id="trapezverfahren">
+        <input readonly type="text" id="formula" name="formula" placeholder="f(x) = sin(x)">
+        <label for="trapez-a">a: </label>
+        <input type="number" id="trapez-a" name="trapez-a" value="0" min="0">
+        <label for="trapez-b">b: </label>
+        <input type="number" id="trapez-b" name="trapez-b" value="1000" min="1">
+        <label for="trapez-b">n: </label>
+        <input type="number" id="trapez-n" name="trapez-n" value="100000" min="1">
+        <select id="engine-select-trapez">
+          <option value="js">
+            JS
+          </option>
+          <option value="wasm">
+            wasm
+          </option>
+        </select>
+        <button id="run-trapez">
+          run
+        </button>
+        <textarea id="bench-results" class="results" readonly></textarea>
+        <canvas id="canvas" width="500" height="500"></canvas>
+      </div>
+      <div id="fib">
+        <label for="nth-fib">n: </label>
+        <input type="number" id="nth-fib" name="nth-fib" value="10">
+        <select id="engine-select-fib">
+          <option value="js">
+            JS
+          </option>
+          <option value="wasm">
+            wasm
+          </option>
+        </select>
+        <button id="run-fib">
+          run
+        </button>
+        <textarea id="bench-results-fib" class="results" readonly></textarea>
+        <canvas id="canvas" width="500" height="500"></canvas>
+      </div>
+    </div>
+    <script src="./bootstrap.js"></script>
+  </body>
+</html>

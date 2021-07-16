@@ -1,1 +1,0 @@
-//# sourceMappingURL=IAdjacentRoomsData.js.map
